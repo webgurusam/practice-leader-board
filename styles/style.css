@@ -93,3 +93,148 @@ hr {
     text-decoration: none;
     color: #562EFF;
 }
+
+/*-------------------
+    latest courses styles
+-------------------------*/
+.latest-course {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 24px;
+}
+
+.single-course {
+    background-color: #ffffff;
+    box-shadow: 1px 2px 20px 3px #d1d1d1;
+    border-radius: 20px;
+    padding: 13px 17px 16px 11px;
+}
+
+.course-banner img {
+    width: 100%;
+}
+
+.course-title {
+    color: #1E1E1E;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.course-instructor {
+    color: #ED6B4F;
+}
+
+.course-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-star {
+    font-size: 12px;
+}
+
+.fa-star.filled {
+    color: #FFC014;
+}
+
+.fa-star.empty {
+    color: #A2A2A2;
+}
+
+.course-info span {
+    color: #A2A2A2;
+    font-size: 15px;
+}
+
+.duration {
+    background: #FFE4E8;
+    border-radius: 15px;
+    color: #FF4A60;
+    font-size: 15px;
+    padding: 4px 6px 5px 5px;
+}
+
+/*-------------------
+    Using Media Queries
+-------------------------*/
+
+/* Mobile Device */
+
+@media only screen and (max-width: 688px) {
+
+    /* common styles */
+    .container {
+        width: 100%;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 5vh;
+    }
+
+    /* top players styles start */
+
+    .top-player,
+    .blogs,
+    .latest-course {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .single-player,
+    .single-blog {
+        flex-direction: column;
+    }
+
+    .single-player img {
+        width: 25%;
+        height: auto;
+    }
+
+    .player-name {
+        font-size: 12vh;
+    }
+
+    /* top blogs styles start */
+    .single-blog,
+    .single-course {
+        margin-bottom: 30px;
+    }
+
+    .blog-info,
+    .blog-thumbnail {
+        text-align: center;
+    }
+
+    .blog-thumbnail img {
+        width: 35%;
+        height: auto;
+    }
+
+}
+
+/* Tab, iPads Device */
+@media only screen and (min-width: 689px) and (max-width: 992px) {
+
+    /* common styles */
+    .container {
+        width: 80%;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 5vh;
+    }
+
+    /* top players styles start */
+    .top-player,
+    .latest-course {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* top blogs styles start */
+    .single-course {
+        margin-bottom: 30px;
+    }
+
+
+}
